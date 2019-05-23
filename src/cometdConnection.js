@@ -7,7 +7,8 @@ export const configureCometD = (refElement, protocol, hostname, sessionId) => {
   let componentsToUpdate = ['myComponent1', 'myComponent2'];
 
   cometd.configure({
-    url: `${protocol}//${hostname}/cometd/45.0`,
+    // url: `${protocol}//${hostname}/cometd/45.0`,
+    url: 'https://roman-kolenda-itechart-dev-ed.lightning.force.com/cometd/45.0/',
     requestHeaders: { Authorization: `OAuth ${sessionId}` },
     logLevel: 'debug',
     appendMessageTypeToURL: false
@@ -37,7 +38,7 @@ export const configureCometD = (refElement, protocol, hostname, sessionId) => {
         );
       }
       else {
-        console.error('Failed to connect to CometD.');
+        console.error('Failed to connect to CometD.', handshakerReply);
       }
     }
   );
