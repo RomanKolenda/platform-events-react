@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { configureCometD } from './cometdConnection'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  componentDidMount() {
+    configureCometD(
+      this.refs.app,
+      'https:',
+      'roman-kolenda-itechart-dev-ed.lightning.force.com',
+      '00D2v000000R3WR!AQcAQGmR0h6hVao9SHL.xqYAF7HChalChDF7ZOnALPyBmRBTkdw_5gAMp8uMJz2Fzm6GxyLvcLY3MGHDmx.P36eVTxcpgVdv'
+    )
+  }
+
+  render() {
+    return (
+      <div ref="app">
+
+      </div>
+    );
+  }
 }
+
 
 export default App;
