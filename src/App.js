@@ -5,16 +5,26 @@ import axios from 'axios';
 class App extends Component {
   state = {};
   componentDidMount() {
-    /* configureCometD(
+    configureCometD(
       this.refs.app,
       'https:',
       'roman-kolenda-itechart-dev-ed.lightning.force.com',
-      '00D2v000000R3WR!AQcAQGmR0h6hVao9SHL.xqYAF7HChalChDF7ZOnALPyBmRBTkdw_5gAMp8uMJz2Fzm6GxyLvcLY3MGHDmx.P36eVTxcpgVdv'
-    ) */
-      axios.get('https://login.salesforce.com')
+      '00D2v000000R3WR!AQcAQFOHEgLnofgBVE5GiCY7eTtOWwWMQNkoYgUOj8nBBAPC2adyFRXh5RhMV_hZ8jSZtoj9zGzigllGOKriYCbY2O.GQbhv'
+    )
+      /* let config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Methods': '*'
+        }
+      }
+      axios.get('https://qa-chat.equeum.com/api', config)
         .then(Response => {
           console.log(Response);
-        });
+        })
+        .catch(error => {
+          console.log(error);
+        }); */
   }
 
   render() {
