@@ -8,8 +8,8 @@ export const configureCometD = (refElement, protocol, hostname, sessionId) => {
 
   cometd.configure({
     // url: `${protocol}//${hostname}/cometd/45.0`,
-    url: 'https://roman-kolenda-itechart-dev-ed.lightning.force.com/cometd/45.0/',
-    requestHeaders: { Authorization: `OAuth ${sessionId}` },
+    url: 'https://roman-kolenda-itechart-dev-ed.lightning.force.com/cometd/42.0/',
+    requestHeaders: { Authorization: `Bearer ${sessionId}` },
     logLevel: 'debug',
     appendMessageTypeToURL: false
   });
